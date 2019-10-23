@@ -1,6 +1,6 @@
 # Joomla 自动化安装与部署
 
-本项目是基于Ansible的[Joomla](https://joomla.org) 自动化安装脚本，实现在 Ansible 上一键安装 Joomla。本项目是开源项目，支持MIT开源协议。如果您不熟悉Ansible的使用，您可以直接使用我们在公有云上提供的镜像。
+本项目是基于Ansible的 [Joomla](https://joomla.org) 自动化安装脚本，实现在 Ansible 上一键安装 Joomla。本项目是开源项目，支持MIT开源协议。如果您不熟悉Ansible的使用，您可以直接使用我们在公有云上提供的镜像。
 
 ## 技术要求
 
