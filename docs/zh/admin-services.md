@@ -1,6 +1,6 @@
 # 服务启停
 
-使用由Websoft9提供的 Nextcloud 部署方案，可能需要用到的服务如下：
+使用由Websoft9提供的 Joomla 部署方案，可能需要用到的服务如下：
 
 ### Apache
 
@@ -47,14 +47,6 @@ sudo systemctl status mysql
 ### Redis
 ```shell
 sudo systemctl start redis
-sudo systemctl stop redis
-sudo systemctl restart redis
-sudo systemctl status redis
-```
-
-### Docker
-```shell
-sudo systemctl start docker
 sudo systemctl stop redis
 sudo systemctl restart redis
 sudo systemctl status redis

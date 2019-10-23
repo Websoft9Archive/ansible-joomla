@@ -1,6 +1,6 @@
 # Start or Stop the Services
 
-These commands you must know when you using the Nextcloud of Websoft9
+These commands you must know when you using the Joomla of Websoft9
 
 ### Apache
 
@@ -47,14 +47,6 @@ sudo systemctl status mysql
 ### Redis
 ```shell
 sudo systemctl start redis
-sudo systemctl stop redis
-sudo systemctl restart redis
-sudo systemctl status redis
-```
-
-### Docker
-```shell
-sudo systemctl start docker
 sudo systemctl stop redis
 sudo systemctl restart redis
 sudo systemctl status redis

@@ -7,7 +7,7 @@
 - 操作系统打个补丁常称之为**更新**，Ubuntu16.04 变更为 Ubuntu18.04，称之为**升级**
 - MySQL5.6.25-->MySQL5.6.30 常称之为**更新**，MySQL5.6->MySQL5.7 称之为**升级**
 
-Nextcloud 完整的更新升级包括：系统级更新（操作系统和运行环境）和 Nextcloud 程序升级两种类型
+Joomla 完整的更新升级包括：系统级更新（操作系统和运行环境）和 Joomla 程序升级两种类型
 
 ## 系统级更新
 
@@ -23,33 +23,26 @@ apt update && apt upgrade -y
 > 本部署包已预配置一个用于自动更新的计划任务。如果希望去掉自动更新，请删除对应的Cron
 
 
-## Nextcloud 升级
+## Joomla 升级
 
-Nextcloud提供了非常人性化的升级入口，根据系统的更新提示既可以完成主版本、插件的更新。
+Joomla 提供了非常人性化的在线升级方案，根据系统的更新提示完成升级
 
-> 在升级之前请做好服务器的快照备份，这个是必须的步骤，因为谁都无法保证升级100%成功。
+> 在升级之前请做好服务器的快照备份，这个是必须的步骤，因为谁都无法保证升级 100% 成功。
 
-### 主程序升级
+1. 登录 Joomla 后台，如果有升级需求系统会显示升级提示
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-bkupgradets-websoft9.png)  
 
-主程序升级与插件升级略有差异，具体参考如下：
+2. 根据提示进入升级中心，确认是否具备升级条件
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-update003-websoft9.png)
 
-1. 登录 Nextcloud 后台，进入【管理】>【基本设置】，若有更新请点击【打开更新管理器】按钮
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-openupdater-websoft9.png)
-2. 进入 Updater（更新管理器）
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-updater-websoft9.png)
-3. 点击【Start update】开始更新
-4. 系统进入自动化升级过程，下载和升级过程比较长，请耐心等待
+3. 升级中，请耐心等待
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-update004-websoft9.PNG)
 
-> 由于升级过程会下载最新版本，Nextcloud的下载服务器在国外，若下载不成功，需要不定期尝试
+4. 升级成功
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-update005-websoft9.PNG)
 
-### 插件升级
+5. 扩展也可以在线升级
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-bkextupgrade-websoft9.png)
 
-升级步骤参加如下：
 
-1. 登录 Nextcloud 后台，进入【应用】，在应用列表中找到需更新的应用
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-updatelist-websoft9.png)
-
-2. 点击【更新】按钮，耐心等待更新
-3. 所有更新完成后，更新清单会显示“所有应用都是最新的”
-
-> 如果升级过程出现问题，例如：无法下载升级包/没有读写权限，请确保网络是通的/Nextcloud目录具有读写权限
+> 更多升级详情，请参考官方升级文档 [Joomla Upgrading](https://docs.joomla.org/Portal:Upgrading_Versions/zh-cn)

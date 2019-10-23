@@ -1,6 +1,6 @@
 # FAQ
 
-#### Nextcloud support multi-language?
+#### Joomla support multi-language?
 
 Yes
 
@@ -8,42 +8,22 @@ Yes
 
 UTF-8
 
-#### Does Nextcloud provide a client?
+#### What the difference between the Joomla(LAMP) and Joomla(LEMP) ?
 
-Yes, includes: Nextcloud Desktop Client, Nextcloud Android App, Nextcloud iOS App
+LAMP is using Apache as Web Server for your Joomla  
+LEMP is using Nginx as Web Server for your Joomla
 
-#### What is the relationship between Nextcloud and ownCloud?
+#### Can I use the RDS of Cloud Provider for Joomla?
 
-Nextcloud is a branch project created by the founder of ownCloud, similar to the relationship between MariaDB and MySQL
+You can use the RDS for Joomla if you need,and just need to modify the database configuration section in the wp-config.php
 
-#### Nextcloud can preview and edit Office document?
+#### Where is the database connection configuration of Joomla?
 
-No, you need to integrate Document Service for it, [how to set?](/solution-more.html#nextcloud-preview-and-edit)
+Database configuration information in *config.php* in the [Joomla installation directory](/stack-components.md#joomla)
 
-#### Nextcloud can integrate external storage?
+#### If there is no domain name, can I deploy Joomla?
 
-Yes
-
-#### How can Nextcloud view&edit file online?
-
-You should complete the [OnlyOffice setting](admin-onlyds) on your Nextcloud
-
-#### What the difference between the Nextcloud(LAMP) and Nextcloud(LEMP) ?
-
-LAMP is using Apache as Web Server for your Nextcloud  
-LEMP is using Nginx as Web Server for your Nextcloud
-
-#### Can I use the RDS of Cloud Provider for Nextcloud?
-
-You can use the RDS for Nextcloud if you need,and just need to modify the database configuration section in the wp-config.php
-
-#### Where is the database connection configuration of Nextcloud?
-
-Database configuration information in *config.php* in the [Nextcloud installation directory](/stack-components.md#nextcloud)
-
-#### If there is no domain name, can I deploy Nextcloud?
-
-Yes, visit Nextcloud by *http://Internet IP*
+Yes, visit Joomla by *http://Internet IP*
 
 #### What is the password for the database root user?
 
@@ -57,21 +37,21 @@ Yes, phpMyAdmin is on it, visit by *http://Internet IP/phpmyadmin*
 
 Edit the  [phpMyAdmin configuration file](/stack-components.md#phpmyadmin), replace `Require all granted` with `Require ip 192.160.1.0`, then restart Apache service
 
-#### Is it possible to modify the source path of Nextcloud?
+#### Is it possible to modify the source path of Joomla?
 
 Yes, modify it by [vhost configuration file](/stack-components.md#apache)
 
-#### Can I configure this Nextcloud if I don't understand the Linux command?
+#### Can I configure this Joomla if I don't understand the Linux command?
 
-Yes, you can use GUI tool WinSCP to start Nextcloud, no commands
+Yes, you can use GUI tool WinSCP to start Joomla, no commands
 
 #### Do I need to change the owner(group) for the files which I upload by SFTP?
 
 No, you don't need to change them because LAMP/LNMP was set to changed automaticly
 
-#### How to modify the path of Nextcloud?
+#### How to modify the path of Joomla?
 
-Example application's path is: */data/wwwroot/nextcloud*, you can modify it by [vhost configuration file](/stack-components.md#apache)
+Example application's path is: */data/wwwroot/joomla*, you can modify it by [vhost configuration file](/stack-components.md#apache)
 
 #### How to delete 9Panel?
 
@@ -82,9 +62,9 @@ Please delete all files in 9Panel */data/apps/9panel* and keep an empty 9Panel f
 Change owner(group) or permissions like below:
 
 ```shell
-#for Nextcloud(lamp)
+#for Joomla(lamp)
 chown -R apache.apache /data/wwwroot
-#for Nextcloud(lemp)
+#for Joomla(lemp)
 chown -R nginx.nginx /data/wwwroot
 
 
@@ -92,12 +72,12 @@ find /data/wwwroot -type d -exec chmod 750 {} \;
 find /data/wwwroot -type f -exec chmod 640 {} \;
 ```
 
-#### Can I deploy multiple sites on the Nextcloud(LAMP) or Nextcloud(LEMP) ?
+#### Can I deploy multiple sites on the Joomla(LAMP) or Joomla(LEMP) ?
 
-Websoft9 Nextcloud stack supports the deployment of multiple applications (websites), but different environments have different operating methods.
+Websoft9 Joomla stack supports the deployment of multiple applications (websites), but different environments have different operating methods.
 
-* [Add new site on Nextcloud on LAMP](https://support.websoft9.com/docs/lamp/solution-deployment.html#deploy-second-application)
-* [Add new site on Nextcloud on LEMP](https://support.websoft9.com/docs/lnmp/solution-deployment.html#deploy-second-application)
+* [Add new site on Joomla on LAMP](https://support.websoft9.com/docs/lamp/solution-deployment.html#deploy-second-application)
+* [Add new site on Joomla on LEMP](https://support.websoft9.com/docs/lnmp/solution-deployment.html#deploy-second-application)
 
 
 #### What's the difference between Deployment and Installation?

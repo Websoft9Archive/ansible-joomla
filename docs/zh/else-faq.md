@@ -1,42 +1,26 @@
 # FAQ
 
-#### Nextcloud 支持多语言吗？
+#### Joomla 支持多语言吗？
 
-支持多语言（包含中文）
+支持多语言（包含中文），建议在初始化安装的时候安装多语言
 
-#### Nextcloud 与 ownCloud 有什么关系？
+#### Joomla(LAMP)，Joomla(LNMP)等商品括号中的 LAMP,LNMP 是什么意思？
 
-Nextcloud 是由 ownCloud 创始人带来开源社区其他人创建的一个分支项目，类似 MariaDB 与 MySQL 的关系
+LAMP和LNMP代表支持 Joomla 运行所对应的基础环境，具体参考[环境说明](/zh/admin-runtime.html)
 
-#### Nextcloud 是否提供客户端？
+#### 是否可以使用云平台的 RDS 作为 Joomla 的数据库？
 
-有。包括：Nextcloud Desktop Client, Nextcloud Android App, Nextcloud iOS App
+可以，修改 [Joomla 配置文件](/zh/stack-components.html#joomla) 即可
 
-#### Nextcloud 自身能够预览和编辑 Office 文档吗？
+#### Joomla能在 Windows 服务器上运行吗？
 
-不可以，需要连接第三方的文档编辑和服务才可以，[设置参考](/zh/solution-more.html#nextcloud-文件预览与编辑)
+可以，但是我们推荐在运行 Joomla 效率更高的 Linux 服务器上运行
 
-#### Nextcloud 支持集成外部存储吗？
+#### Joomla数据库连接配置信息在哪里？
 
-支持多种主流外部存储服务
+数据库配置信息 [Joomla 配置文件](/zh/stack-components.html#joomla)中
 
-#### Nextcloud(LAMP)，Nextcloud(LNMP)等商品括号中的 LAMP,LNMP 是什么意思？
-
-LAMP和LNMP代表支持 Nextcloud 运行所对应的基础环境，具体参考[环境说明](/zh/admin-runtime.html)
-
-#### 是否可以使用云平台的 RDS 作为 Nextcloud 的数据库？
-
-可以，修改 [Nextcloud 配置文件](/zh/stack-components.html#nextcloud) 即可
-
-#### Nextcloud能在Windows服务器上运行吗？
-
-可以，但是我们推荐在运行 Nextcloud 效率更高的 Linux 服务器上运行
-
-#### Nextcloud数据库连接配置信息在哪里？
-
-数据库配置信息 [Nextcloud 配置文件](/zh/stack-components.html#nextcloud)中
-
-#### 如果没有域名是否可以部署 Nextcloud？
+#### 如果没有域名是否可以部署 Joomla？
 
 可以，访问`http://服务器公网IP` 即可
 
@@ -52,17 +36,17 @@ LAMP和LNMP代表支持 Nextcloud 运行所对应的基础环境，具体参考[
 
 连接服务器，编辑 phpMyAdmin 配置文件，将其中的 Require all granted 更改为 Require ip 192.160.1.0，然后重启 Apache 服务
 
-#### 是否可以修改 Nextcloud 的源码路径？
+#### 是否可以修改 Joomla 的源码路径？
 
-可以，通过修改 [虚拟主机配置文件](/zh/stack-components.md#nextcloud)中相关参数
+可以，通过修改 [虚拟主机配置文件](/zh/stack-components.md#joomla)中相关参数
 
 #### 如何修改上传的文件权限?
 
 ```shell
-#Nextcloud(LAMP)
+#Joomla(LAMP)
 chown -R apache.apache /data/wwwroot
 
-#Nextcloud(LNMP)
+#Joomla(LNMP)
 chown -R nginx.nginx /data/wwwroot
 
 find /data/wwwroot -type d -exec chmod 750 {} \;

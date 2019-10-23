@@ -1,6 +1,6 @@
 # SSL/HTTPS
 
-Nextcloud deployment package has installed the SSL module of Nginx and open Certificate Authority **[Let's Encrypt](https://letsencrypt.org/)** for you configure the HTTPS quickly and conveniently.
+Joomla deployment package has installed the SSL module of Nginx and open Certificate Authority **[Let's Encrypt](https://letsencrypt.org/)** for you configure the HTTPS quickly and conveniently.
 
 > In addition to the vhost configuration file, HTTPS settings do not need to modify any files in Nginx
 
@@ -12,7 +12,7 @@ sudo certbot
 ```
 
 If you have applied for a commercial certificate, complete the HTTPS configuration in just three steps:
-### For Nextcloud (LAMP)
+### For Joomla (LAMP)
 
 LAMP means that **Apache** for Web Server
 
@@ -22,31 +22,31 @@ LAMP means that **Apache** for Web Server
    ``` text
    #-----HTTPS template start------------
    <VirtualHost *:443>
-    ServerName  nextcloud.yourdomain.com
-    DocumentRoot "/data/wwwroot/nextcloud"
-    #ErrorLog "logs/nextcloud.yourdomain.com-error_log"
-    #CustomLog "logs/nextcloud.yourdomain.com-access_log" common
-    <Directory "/data/wwwroot/nextcloud">
+    ServerName  joomla.yourdomain.com
+    DocumentRoot "/data/wwwroot/joomla"
+    #ErrorLog "logs/joomla.yourdomain.com-error_log"
+    #CustomLog "logs/joomla.yourdomain.com-access_log" common
+    <Directory "/data/wwwroot/joomla">
     Options Indexes FollowSymlinks
     AllowOverride All
     Require all granted
     </Directory>
     SSLEngine on
-    SSLCertificateFile  /data/cert/nextcloud.yourdomain.com.crt
-    SSLCertificateKeyFile  /data/cert/nextcloud.yourdomain.com.key
+    SSLCertificateFile  /data/cert/joomla.yourdomain.com.crt
+    SSLCertificateKeyFile  /data/cert/joomla.yourdomain.com.key
     </VirtualHost>
    #-----HTTPS template end------------
    ```
 4. Modify ServerName, SSLCertificateFile, SSLCertificateKeyFile
 5. Save it and [Restart Apache service](/admin-services.md#apache)
 
-### For Nextcloud (LEMP)
+### For Joomla (LEMP)
 
 LEMP means that **Nginx** for Web Server
 
 1. Upload your certificate to the directory of your instance: */data/cert* 
 2. Edit the vhost configuration file: */etc/nginx/conf.d/default.conf* 
-3. Insert the **HTTPS template** into Nextcloud's *server{ }* already existing
+3. Insert the **HTTPS template** into Joomla's *server{ }* already existing
    ``` text
    #-----HTTPS template start------------
    listen 443 ssl; 

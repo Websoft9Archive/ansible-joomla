@@ -6,10 +6,10 @@ You should know the differences between the terms **Update** and **Upgrade**([Ex
 - Operating system patching is **Update**, Ubuntu16.04 to Ubuntu18.04 is **Upgrade**
 - MySQL5.6.25 to MySQL5.6.30 is **Update**, MySQL5.6 to MySQL5.7 is **Upgrade**
 
-For Nextcloud maintenance, focus on the following two Update & Upgrade jobs
+For Joomla maintenance, focus on the following two Update & Upgrade jobs
 
 - Sytem update(Operating System and Running Environment) 
-- Nextcloud upgrade 
+- Joomla upgrade 
 
 ## System Update
 
@@ -24,26 +24,23 @@ apt update && apt upgrade -y
 ```
 > This deployment package is preconfigured with a scheduled task for automatic updates. If you want to remove the automatic update, please delete the corresponding Cron
 
-## Nextcloud Upgrade
+## Joomla Upgrade
 
-Nextcloud provides a very user-friendly upgrade (update) portal, which can complete the update of the main version and APP plug-in according to the update prompt of the system.
+Joomla provides a very user-friendly upgrade (update) portal
 
-### Core Upgrade
+> Please completed backup of Server before any upgrade of Joomla
 
-You can upgrade Nextcloud from the web GUI
+1. Log in Joomla backend, you can see the upgrade reminder when have latest version
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-bkupgradets-websoft9.png)  
 
-1. Log in Nextcloud console, go to【Addmin】>【Basic Settings】, click the 【Open Updater】button when have new version
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-openupdater-websoft9.png)
-2. GO to Updater
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-updater-websoft9.png)
-3. Check the upgrade requirement, click 【Start update】
-4. The system enters the automatic upgrade process, the download and upgrade process is relatively long, please be patient
+2. Go to the upgrade interface, check the upgrade requirement and start to upgrade
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-update003-websoft9.png)
 
-### Apps Upgrade
+3. Upgrading, wait for it
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-update004-websoft9.PNG)
 
-You can upgrade Nextcloud Apps from the web GUI
+4. Upgrade successfully
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-update005-websoft9.PNG)
 
-1. Log in Nextcloud console, go to 【Apps】, find the apps that need to be upgraded
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-updatelist-websoft9.png)
-
-2. Click 【Update】 button, wait for some minutes
+5. You can upgrade extension of Joomla also
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-bkextupgrade-websoft9.png)

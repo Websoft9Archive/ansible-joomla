@@ -1,12 +1,12 @@
 # Troubleshooting
 
-We collect the most common troubleshooting of using Nextcloud for your reference:
+We collect the most common troubleshooting of using Joomla for your reference:
 
 > Many troubleshooting is closely related to the Server, if you can confirm troubleshooting is related to Cloud Platform, please refer to [Cloud Platform Documentation](https://support.websoft9.com/docs/faq/tech-instance.html)
 
-#### Nextcloud Redirects Error
+#### Joomla Redirects Error
 
-When add new language for Nextcloud, it will add redirects rules in the  `.htaccess` file of Nextcloud root directory.
+When add new language for Joomla, it will add redirects rules in the  `.htaccess` file of Joomla root directory.
 
 Check your `.htaccess` file in your application root directory, make sure there not any cycle redirects settings
 

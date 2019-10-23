@@ -49,18 +49,24 @@ Manual backup for application is based on the **Exporting source code and databa
 ```
 The general manual backup operation steps are as follows:
 
-1. Compress and download the entire */data/wwwroot/nextcloud* directory by SFTP 
-2. Compress and download the entire */data/wwwroot/nextcloud/data* directory by SFTP 
-3. Export Nextcloud's database by [phpMyAdmin](/admin-mysql.md)
+1. Compress and download the entire */data/wwwroot/joomla* directory by SFTP 
+2. Export Joomla's database by [phpMyAdmin](/admin-mysql.md)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-export-websoft9.png)
-4. Put the source code file, data file and database file in the same folder, named according to the date
-5. Backup completed
+3. Put the source code file, data file and database file in the same folder, named according to the date
+4. Backup completed
 
-### Nextcloud online backup
+### Joomla online backup
 
-This section provides Nextcloud online backup solution
+This section provides Joomla online backup solution
 
-1. Log in Nextcloud console as administrator, install **[OwnBackup](https://apps.nextcloud.com/apps/ownbackup)** 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-backupapps-websoft9.png)
-2. Go to【Admin】>【OwnBackup】, start backup, and you can restore it also
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-backupapp002-websoft9.png)
+1. Download extension [Akeeda](https://www.akeebabackup.com/download.html)
+
+2. Log in Joomla console as administrator, install Akeeka by uploading package
+
+3. Go to【Dashboard】>【System】>【Control Panel】, find 【Backup is up-to-date】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-backup-websoft9.png)
+
+4. Set the backup
+
+5. You can **Restore** Joomla with **Akeeda** also
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-restore-websoft9.png)

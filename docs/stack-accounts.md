@@ -1,10 +1,10 @@
 # Username and Password
 
-These accounts are required for Nextcloud image installation and configuration
+These accounts are required for Joomla image installation and configuration
 
-## Nextcloud
+## Joomla
 
-Administrator account is set by yourselft at the time of Nextcloud installation wizard
+Administrator account is set by yourselft at the time of Joomla installation wizard
 
 ## MySQL
 

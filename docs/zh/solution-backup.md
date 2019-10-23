@@ -54,18 +54,24 @@ sidebarDepth: 3
 ```
 通用的手动备份操作步骤如下：
 
-1. 通过 WinSCP 将网站源码目录（*/data/wwwroot/nextcloud*）**压缩后**再完整的下载到本地
-1. 通过 WinSCP 将网站数据目录（*/data/wwwroot/nextcloud/data*）**压缩后**再完整的下载到本地
-2. 通过 phpMyAdmin 导出 Nextcloud 数据库
+1. 通过 WinSCP 将网站源码目录（*/data/wwwroot/joomla*）**压缩后**再完整的下载到本地
+2. 通过 phpMyAdmin 导出 Joomla 数据库
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-export-websoft9.png)
 3. 将程序文件、数据文件和数据库文件放到同一个文件夹，根据日期命名
 4. 备份工作完成
 
-### Nextcloud 后台备份
+### Joomla 后台备份
 
-Nextcloud 后台提供在线备份功能
+通过安装 Joomla 扩展，可以实现后台在线备份：
 
-1. 登录 Nextcloud 后台，安装 **[OwnBackup](https://apps.nextcloud.com/apps/ownbackup)** 插件
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-backupapps-websoft9.png)
-2. 打开：【Admin】>【Additional settings】>【OwnBackup】，开始备份
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-backupapp002-websoft9.png)
+1. 下载 [Akeeda](https://www.akeebabackup.com/download.html)
+
+2. 登录 Joomla 后台，通过上传压缩文件的方式安装 **Akeeda** 
+
+3. 打开：【Dashboard】>【System】>【Control Panel】，找到【Backup is up-to-date】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-backup-websoft9.png)
+
+4. 开始设置备份策略
+
+5. 通过 Akeeda 实现的备份可以在线恢复
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-restore-websoft9.png)

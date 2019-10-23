@@ -4,129 +4,74 @@ Each of the following solutions has been proven to be effective and we hope to b
 
 ## Domain binding
 
-The precondition for **Domain binding** is have completed the **Domain resolution** for Nextcloud Instance.
+The precondition for **Domain binding** is have completed the **Domain resolution** for Joomla Instance.
 
 From the perspective of server security and subsequent maintenance considerations, the **Domain Binding** step cannot be omitted.
 
-Nextcloud domain name binding steps:
+Joomla domain name binding steps:
 
 1. Connect your Cloud Server
 2. Modify [vhost configuration file](/stack-components.md#apache), change the domain name item for you
    ```text
-   #### Nextcloud (LAMP) bind domain #### 
+   #### Joomla (LAMP) bind domain #### 
 
      <VirtualHost *:80>
-     ServerName nextcloud.mydomain.com # modify it for you
-     DocumentRoot "/data/wwwroot/Nextcloud"
+     ServerName joomla.mydomain.com # modify it for you
+     DocumentRoot "/data/wwwroot/Joomla"
      ...
      
-   #### Nextcloud (LEMP) bind domain #### 
+   #### Joomla (LEMP) bind domain #### 
 
      server {
       listen 80;
-      server_name    nextcloud.example.com; # modify it for you
+      server_name joomla.example.com; # modify it for you
      ...
 
    ```
 3. Save it and restart [Web Service](/admin-services.md#apache)
 
 
-## Nextcloud change domain
+## Joomla languages
 
-You can change the domain of Nextcloud by the following steps:
+Joomla supports multiple languages. Here are the main steps to install and set up multiple languages:
 
-1. Complete the new **Domain resolution and Domain binding**
-2. Modify [Nextcloud configuration file](/stack-components.html#nextcloud)
-   ```
-   'overwrite.cli.url' => 'nextcloud.yourdomain.com', # Set it to your new domain
-   ```
-3. [Restart PHP-FPM service](/admin-services.html#php-fpm)
+1. Log in Joomla, go to【Extension】>【Language(s)】>【installed】, install the languages you want
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-bkinstalllan-websoft9.png)
 
-## Nextcloud language
+2. Then set your default language of Joomla Site or Administrator
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-bkenablelang-websoft9.png)
 
-Log in nextcloud, go to【Personal】>【Personal Info】 and set your language
+## Joomla extension
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-mylanguage-websoft9.png)
+[Joomla! Extensions Directory™](https://extensions.joomla.org/) provided lots of extensions for you:
 
-## Nextcloud install apps
+1. Log in Joomla
+2. Go to【Extensions】>【Install】>【Install from Web】and search the extensions
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-bkinstallext-websoft9.png)
+3. Install them online
 
-Nextcloud integrated [Marketplace](https://marketplace.nextcloud.com/) that have lots of extensions(apps), the following is the step for installing apps
+## Joomla install template
 
-1. Log in Nextcloud, go to【Apps】>【App bundles】, search the apps you want to use
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-backendmk-websoft9.png)
-2. Instal it online
+You can upload your template package to install it:
 
-## Nextcloud LDAP
+1. Prepare your template (.zip file)
 
-Refer to *[User Authentication with LDAP](https://docs.nextcloud.com/server/latest/admin_manual/configuration_user/user_auth_ldap.html)*
+2. Log in Joomla backend
 
-## Nextcloud CLI-OCC
+3. Open 【Extensions】>【Install】, select the tab【Upload package file】to install template
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-upload_install.png)
 
-Nextcloud's occ command (Nextcloud console) is Nextcloud's command-line interface. You can perform many common server operations with occ, such as installing and upgrading Nextcloud, manage users, encryption, passwords, LDAP setting, and more.
+4. When have completed the installation, go to 【Extensions】>【Templates】>【Styles】, enable your template as default template
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-bkenabletemplate-websoft9.png)
 
-## Nextcloud external storage
+> Some template zip package may have the Joomla source code, at this time **Install template=Install Joomla**
 
-The External Storage Support application enables you to mount external storage services and devices as secondary Nextcloud storage devices. You may also allow users to mount their own external storage services.
+## Joomla Cache
 
-1. Log in Nextcloud console, enable **External storage support** application
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-enablestorage-websoft9.png)
+Joomla backend have cache management function, refer to this picture:
 
-2. Open【Admin】>【External Storage】, select an external storage service
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-enablestorage002-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-opencache-websoft9.png)
 
-3. Set it
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-auth_mechanism-websoft9.png)
+## Joomla reset administrator password
 
-More details please refer to [External Storage](https://docs.nextcloud.com/server/latest/admin_manual/configuration_files/external_storage_configuration_gui.html)
-
-## Nextcloud transfer
-
-Nextcloud source code and data is in system disk by default, you can transfer them to data disk or  Object storage:
-
-### to data disk
-
-1. Purchase a data disk from Cloud Platform, then **attach** it to Nextcloud Server
-2. Use SFTP tool to connect Server and stop service
-   ```
-   systemctl stop httpd
-   ```
-3. Create a new folder */data/wwwroot/nextcloud2* 
-4. Initialize data disk, and **mount** it to *nextcloud2* folder
-5. Copy all files in */data/wwwroot/nextcloud* to */data/wwwroot/nextcloud2*  
-6. Modify the Nextcloud directory in  [vhost configuration file](/zh/stack-components.html#apache) 
-7. Start the service
-   ```
-   systemctl start httpd
-   ```
-
-### to Object storage
-
-1. Purchase Object storage from Cloud Platform, then create a new **bucket**
-2. Use SFTP tool to connect Server and stop service
-   ```
-   systemctl stop httpd
-   ```
-3. Create a new folder */data/wwwroot/nextcloud2* 
-4. Then **mount** it to *nextcloud2* folder
-5. Copy all files in */data/wwwroot/nextcloud* to */data/wwwroot/nextcloud2*  
-6. Modify the Nextcloud directory in  [vhost configuration file](/zh/stack-components.html#apache) 
-7. Start the service
-   ```
-   systemctl start httpd
-   ```
-8. Set the object storage to boot automatically (different cloud platform operations)
-
-> The **mount** command is very difficult for user, and there is a risk of copy failure if the data is exceed 10G
-
-## Nextcloud preview and edit
-
-Nextcloud can't preview and edit Office document itself, you need to integrate document Server service for Nextcloud to implement this function:
-
-1. Enable the **TCP:8080** port on **[Inbound of Security Group Rule](https://support.websoft9.com/docs/faq/tech-instance.html)**
-2. Log in to Nextcloud console, go to 【Apps】page
-	 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-olpreview-1-websoft9.png)
-3. Find the app【ONLYOFFICE】 and install it
-4. Set the 【ONLYOFFICE】
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-setonlyoffice-websoft9.png)
-   > The smear in the figure should be modified to **Internet IP**
-5. Refresh the Nextcloud, test the preview and edit function of documentation
+If you don't remember your administrator password, please refer to the docs [here](https://docs.joomla.org/How_do_you_recover_or_reset_your_admin_password%3F/) to reset it

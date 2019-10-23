@@ -2,7 +2,7 @@
 
 网站完成域名绑定且可以通过HTTP访问之后，方可设置HTTPS。
 
-Nextcloud 预装包，已安装Web服务器 SSL 模块和公共免费证书方案 [Let's Encrypt](https://letsencrypt.org/) ，并完成预配置。
+Joomla 预装包，已安装Web服务器 SSL 模块和公共免费证书方案 [Let's Encrypt](https://letsencrypt.org/) ，并完成预配置。
 
 > 除了虚拟主机配置文件之外，HTTPS设置无需修改Nginx任何文件
 
@@ -12,9 +12,9 @@ Nextcloud 预装包，已安装Web服务器 SSL 模块和公共免费证书方�
 
 如果你已经申请了商业证书，只需三个步骤，即可完成HTTPS配置
 
-### Nextcloud(LAMP)
+### Joomla(LAMP)
 
-Nextcloud(LAMP) 即运行环境采用 **Apache** 作为 Web Server  
+Joomla(LAMP) 即运行环境采用 **Apache** 作为 Web Server  
 
 1. 将申请的证书、 证书链文件和秘钥文件上传到 */data/cert* 目录
 2. 打开虚拟主机配置文件： */etc/httpd/conf.d/vhost.conf* 
@@ -22,30 +22,30 @@ Nextcloud(LAMP) 即运行环境采用 **Apache** 作为 Web Server
    ``` text
    #-----HTTPS template start------------
    <VirtualHost *:443>
-    ServerName  nextcloud.yourdomain.com
-    DocumentRoot "/data/wwwroot/nextcloud"
-    #ErrorLog "logs/nextcloud.yourdomain.com-error_log"
-    #CustomLog "logs/nextcloud.yourdomain.com-access_log" common
-    <Directory "/data/wwwroot/nextcloud">
+    ServerName  joomla.yourdomain.com
+    DocumentRoot "/data/wwwroot/joomla"
+    #ErrorLog "logs/joomla.yourdomain.com-error_log"
+    #CustomLog "logs/joomla.yourdomain.com-access_log" common
+    <Directory "/data/wwwroot/joomla">
     Options Indexes FollowSymlinks
     AllowOverride All
     Require all granted
     </Directory>
     SSLEngine on
-    SSLCertificateFile  /data/cert/nextcloud.yourdomain.com.crt
-    SSLCertificateKeyFile  /data/cert/nextcloud.yourdomain.com.key
+    SSLCertificateFile  /data/cert/joomla.yourdomain.com.crt
+    SSLCertificateKeyFile  /data/cert/joomla.yourdomain.com.key
     </VirtualHost>
    #-----HTTPS template end------------
    ```
 4. 修改 ServerName, SSLCertificateFile, SSLCertificateKeyFile等参数的值
 5. 保存， [重启 Apache 服务](/admin-services.md#apache)
 
-### Nextcloud(LEMP)
+### Joomla(LEMP)
 
-Nextcloud(LEMP) 即运行环境采用 **Nginx** 作为 Web Server  
+Joomla(LEMP) 即运行环境采用 **Nginx** 作为 Web Server  
 
 1. 将申请的证书、 证书链文件和秘钥文件上传到 */data/cert* 目录
-2. 打开虚拟主机配置文件：*/etc/nginx/conf.d/default.conf* ，插入**HTTPS 配置段** 到 Nextcloud 的 *server{ }* 中
+2. 打开虚拟主机配置文件：*/etc/nginx/conf.d/default.conf* ，插入**HTTPS 配置段** 到 Joomla 的 *server{ }* 中
  ``` text
    #-----HTTPS template start------------
    listen 443 ssl; 
