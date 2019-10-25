@@ -15,7 +15,7 @@
 2. 选择一门语言，并设置后台管理账号信息，牢记之
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-installstart-websoft9.png)
 
-3. 填写您的数据库参数（[不知道账号密码？](https://support.websoft9.com/docs/lamp/zh/stack-accounts.html)），然后进入下一步
+3. 填写您的数据库参数（[不知道账号密码？](/zh/stack-accounts.md#mysql)），然后进入下一步
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-installdb-websoft9.png)
 
 4. 选择或不选择一个演示数据，然后进入下一步

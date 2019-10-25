@@ -15,7 +15,7 @@ If you have completed the Joomla deployment on Cloud Platform, the following ste
 2. Set the site information and Super User Account Details,then Cick “next” button
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-installconf-websoft9.png)
 
-3. Then configure the database connection information([Don't know password?](https://support.websoft9.com/docs/lamp/stack-accounts.html#mysql))
+3. Then configure the database connection information([Don't know password?](/stack-accounts.html#mysql))
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-installdb-websoft9.png)
 
 4. Click the "Next" button when complete the Database Configuration,the wizard will start to install.
