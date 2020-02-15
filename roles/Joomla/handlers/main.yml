@@ -1,3 +1,0 @@
----
-- name: restart Apache
-  service: name="{{joomla_service}}" state=restarted enabled=yes
