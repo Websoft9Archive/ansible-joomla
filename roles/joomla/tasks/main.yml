@@ -11,7 +11,7 @@
     joomla_name: "joomla"
     joomla_title: "Joomla"
     joomla_download_url: "https://github.com/joomla/joomla-cms"
-    joomla_version: "13.1"
+    joomla_version: "3.9.15"
 
 - debug:
     msg: runtime {{ joomla_vhost_dir }}, {{joomla_vhost_src}}, {{joomla_service}}, {{joomla_owner}}, {{joomla_webs}}, {{ansible_distribution}}
