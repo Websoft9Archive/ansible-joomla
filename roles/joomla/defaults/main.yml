@@ -1,6 +1,3 @@
-#joomla版本，需定期维护
-joomla_version: v3.8.1
-
 #Web服务器：apache | nginx，通过交互式选择获取
 joomla_webs: apache
 

@@ -8,16 +8,13 @@
     joomla_vhost_src: "{{php_runtime_meta[ansible_distribution][joomla_webs].vhost_src}}"
     joomla_service: "{{php_runtime_meta[ansible_distribution][joomla_webs].service}}"
     joomla_owner: "{{php_runtime_meta[ansible_distribution][joomla_webs].owner}}"
+    joomla_name: "joomla"
+    joomla_title: "Joomla"
+    joomla_download_url: "https://github.com/joomla/joomla-cms"
+    joomla_version: v3.8.1
 
 - debug:
     msg: runtime {{ joomla_vhost_dir }}, {{joomla_vhost_src}}, {{joomla_service}}, {{joomla_owner}}, {{joomla_webs}}, {{ansible_distribution}}
-
-# 9panel
-- name: Enable 9panel I
-  lineinfile:
-    path: /data/apps/9panel/js/websoft9.js
-    regexp: 'var set_apps=\["Example"\];'
-    line: 'var set_apps=["Joomla"];'
 
 # Joomla  
 - name: Remove example dir
@@ -25,15 +22,20 @@
     path: /data/wwwroot/www.example.com
     state: absent
 
+- name: Remove existing dir
+  file:
+    path: /data/wwwroot/{{joomla_name}}
+    state: absent
+
 - name: Create Joomla folder
   file:
-    path: /data/wwwroot/joomla
+    path: /data/wwwroot/{{joomla_name}}
     state: directory
     mode: 0750
 
-- name: Download joomla-LMS
+- name: Download joomla
   git:
-    repo: https://github.com/joomla/joomla-cms
+    repo: "{{joomla_download_url}}"
     dest: /data/wwwroot/joomla
     version: "{{joomla_version}}"
 
