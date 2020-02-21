@@ -31,7 +31,7 @@
     version: "{{joomla_version}}"
 
 - name: Rename dir name
-  shell: if [ ! -d "/data/wwwroot/{{joomla_name}}" ]; then mv *{{joomla_name}}* {{joomla_name}}; fi
+  shell: cd /data/wwwroot; if [ ! -d "{{joomla_name}}" ]; then mv *{{joomla_name}}* {{joomla_name}}; fi
 
 - name: Copy PHP Config file
   copy: src=php.ini dest=/etc/php.ini
