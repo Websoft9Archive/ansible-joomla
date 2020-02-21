@@ -8,17 +8,15 @@
     joomla_vhost_src: "{{php_runtime_meta[ansible_distribution][joomla_webs].vhost_src}}"
     joomla_service: "{{php_runtime_meta[ansible_distribution][joomla_webs].service}}"
     joomla_owner: "{{php_runtime_meta[ansible_distribution][joomla_webs].owner}}"
-    joomla_name: "joomla"
-    joomla_title: "Joomla"
-    joomla_download_url: "https://github.com/joomla/joomla-cms"
-    joomla_version: "3.9.15"
 
 - debug:
     msg: runtime {{ joomla_vhost_dir }}, {{joomla_vhost_src}}, {{joomla_service}}, {{joomla_owner}}, {{joomla_webs}}, {{ansible_distribution}}
 
 # Joomla  
 - name: Remove extra dir
-  shell: rm -rf /data/wwwroot/*
+  shell: |
+    rm -rf /data/wwwroot/www.example.com
+    rm -rf /data/wwwroot/{{joomla_name}}
 
 - name: Create Joomla folder
   file:
