@@ -4,10 +4,10 @@
 
 #Modify var for this playbook
 - set_fact:
-    joomla_vhost_dir: "{{php_runtime_meta[ansible_distribution][joomla_webs].vhost_dir}}"
-    joomla_vhost_src: "{{php_runtime_meta[ansible_distribution][joomla_webs].vhost_src}}"
-    joomla_service: "{{php_runtime_meta[ansible_distribution][joomla_webs].service}}"
-    joomla_owner: "{{php_runtime_meta[ansible_distribution][joomla_webs].owner}}"
+    joomla_vhost_dir: "{{php_runtime_meta[ansible_os_family][joomla_webs].vhost_dir}}"
+    joomla_vhost_src: "{{php_runtime_meta[ansible_os_family][joomla_webs].vhost_src}}"
+    joomla_service: "{{php_runtime_meta[ansible_os_family][joomla_webs].service}}"
+    joomla_owner: "{{php_runtime_meta[ansible_os_family][joomla_webs].owner}}"
 
 - debug:
     msg: runtime {{ joomla_vhost_dir }}, {{joomla_vhost_src}}, {{joomla_service}}, {{joomla_owner}}, {{joomla_webs}}, {{ansible_distribution}}
