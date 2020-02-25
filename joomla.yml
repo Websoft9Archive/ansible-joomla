@@ -24,6 +24,8 @@
       '2': 'LNMP'
 
     joomla_webs: "{{webs_select[webs_selection]}}" 
+    phpmyadmin_webs: "{{webs_select[webs_selection]}}" 
+    w9panel_webs: "{{webs_select[webs_selection]}}" 
 
     w9panel_set_infrastructure: "{{infrastructure_select[webs_selection]}}" 
     w9panel_set_apps: 
@@ -51,4 +53,5 @@
     - {role: role_redis, tags: "role_redis"}
     - {role: joomla, tags: "joomla"}
     - {role: role_init_password, tags: "role_init_password"}
-    - {role: role_end, tags: "end"}
+    - {role: role_preend, tags: "role_preend"}
+    - {role: role_end, tags: "role_end"}
