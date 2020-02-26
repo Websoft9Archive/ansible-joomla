@@ -15,20 +15,13 @@
 # Joomla  
 - name: Remove extra dir
   shell: |
-    rm -rf /data/wwwroot/www.example.com
-    rm -rf /data/wwwroot/{{joomla_name}}
-
-- name: Create Joomla folder
-  file:
-    path: /data/wwwroot/{{joomla_name}}
-    state: directory
-    mode: 0750
+    rm -rf /data/wwwroot/*{{joomla_name}}*
 
 - name: Download joomla
-  git:
-    repo: "{{joomla_download_url}}"
-    dest: /data/wwwroot/joomla
-    version: "{{joomla_version}}"
+  unarchive:
+    src: "{{joomla_download_url}}"
+    dest: /data/wwwroot
+    remote_src: yes
 
 - name: Rename dir name
   shell: cd /data/wwwroot; if [ ! -d "{{joomla_name}}" ]; then mv *{{joomla_name}}* {{joomla_name}}; fi
@@ -38,10 +31,9 @@
 
 # 系统通用
 - name: Permission directory
-  shell: find /data/wwwroot -type d -exec chmod 750 {} \;
-  
-- name: Permission file
-  shell: find /data/wwwroot -not -type d -exec chmod 640 {} \;
+  shell: |
+    find /data/wwwroot -type d -exec chmod 750 {} \;
+    find /data/wwwroot -not -type d -exec chmod 640 {} \;
 
 # 根据不同的基础环境分别处理
 - block:
@@ -49,7 +41,7 @@
     shell: chown -R {{joomla_owner}}:{{joomla_owner}} /data/wwwroot
 
   - name: Copy Apache or Nginx vhost configuration
-    copy: src={{joomla_vhost_src}} dest={{joomla_vhost_dir}}
+    template: src={{joomla_vhost_src}} dest={{joomla_vhost_dir}}
     
   - name: restart Apache or Nginx
     service: name={{joomla_service}} state=restarted enabled=yes

@@ -7,5 +7,5 @@ joomla_service: httpd
 joomla_owner: apache
 joomla_name: "joomla"
 joomla_title: "Joomla"
-joomla_download_url: "https://github.com/joomla/joomla-cms"
-joomla_version: "13.1"  #版本号需定期维护
+#下载链接需定期维护
+joomla_download_url: "https://downloads.joomla.org/cms/joomla3/3-9-15/Joomla_3-9-15-Stable-Full_Package.zip?format=zip"
