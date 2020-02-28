@@ -8,6 +8,7 @@
     joomla_vhost_src: "{{php_runtime_meta[ansible_os_family][joomla_webs].vhost_src}}"
     joomla_service: "{{php_runtime_meta[ansible_os_family][joomla_webs].service}}"
     joomla_owner: "{{php_runtime_meta[ansible_os_family][joomla_webs].owner}}"
+    joomla_db_password: "{{mysql_root_password}}"
 
 - debug:
     msg: runtime {{ joomla_vhost_dir }}, {{joomla_vhost_src}}, {{joomla_service}}, {{joomla_owner}}, {{joomla_webs}}, {{ansible_distribution}}
@@ -26,9 +27,6 @@
 - name: Rename dir name
   shell: cd /data/wwwroot; if [ ! -d "{{joomla_name}}" ]; then mv *{{joomla_name}}* {{joomla_name}}; fi
 
-- name: Copy PHP Config file
-  copy: src=php.ini dest=/etc/php.ini
-
 # 系统通用
 - name: Permission directory
   shell: |
@@ -45,3 +43,6 @@
     
   - name: restart Apache or Nginx
     service: name={{joomla_service}} state=restarted enabled=yes
+
+  - name: restart php-fpm
+    service: name=php-fpm state=restarted

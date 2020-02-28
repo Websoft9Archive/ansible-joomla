@@ -4,6 +4,7 @@
 
 * 添加 Nginx 支持
 * 添加 Ubuntu18.04, Amazon Linux2 支持
+* 删除替换php.ini步骤，测试安装，确定php.ini的参数
 
 ## Logs
 
