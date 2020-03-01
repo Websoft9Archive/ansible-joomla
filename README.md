@@ -24,14 +24,13 @@
 
 ## 本项目安装的是 Joomla 最新版吗？
 
-本项目通过下载[joomla源码](https://github.com/joomla/joomla-cms)进行安装，其中版本号存储在：[role/joomla/default/main.yml](/roles/joomla/defaults/main.yml)
+本项目通过下载[joomla源码](https://downloads.joomla.org/)进行安装，其中版本号存储在：[role/joomla/default/main.yml](/roles/joomla/defaults/main.yml)
 
 ```
 #joomla版本，需定期维护
-joomla_version: 3.9.15
+joomla_download_url: "https://downloads.joomla.org/cms/joomla3/3-9-15/Joomla_3-9-15-Stable-Full_Package.zip"
 ```
-
-如果你想修改版本号，请先查看 joomla 仓库 [tags](https://github.com/joomla/joomla-cms/tags) 标签值，再修改上面的 `joomla_version` 变量值。
+如果你想修改版本，请到[Joomla下载中心](https://downloads.joomla.org/)获取源码地址，然后修改变量值。  
 
 我们会定期检查版本，并测试官方版本的可用性，以保证用户可以顺利安装最新版。
 
