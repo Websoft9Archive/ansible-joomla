@@ -18,10 +18,15 @@
   shell: |
     rm -rf /data/wwwroot/*{{joomla_name}}*
 
+- name: Create folder /data/wwwroot/{{joomla_name}}
+  file:
+    path: /data/wwwroot/{{joomla_name}}
+    state: directory
+
 - name: Download joomla
   unarchive:
     src: "{{joomla_download_url}}"
-    dest: /data/wwwroot
+    dest: /data/wwwroot/joomla
     remote_src: yes
 
 - name: Rename dir name
