@@ -24,15 +24,13 @@
 
 ## 本项目安装的是 Joomla 最新版吗？
 
-本项目通过下载[joomla源码](https://github.com/joomla/joomla-cms/releases)进行安装，其中下载链接存储在：[role/joomla/default/main.yml](/roles/joomla/defaults/main.yml)
+本项目通过下载 joomla 源码进行安装，下载链接存储在：[role/joomla/default/main.yml](/roles/joomla/defaults/main.yml)。我们会定期检查并测试官方版本的可用性，尽可能保证用户可以顺利安装最新版。
 
 ```
-#joomla下载链接，需定期更新维护
 joomla_download_url: "https://github.com/joomla/joomla-cms/releases/download/3.9.15/Joomla_3.9.15-Stable-Full_Package.zip"
 ```
-如果你想修改版本，请到 [Joomla 仓库 release 页面](https://downloads.joomla.org/)获取源码下载链接，根据需求更改[/roles/joomla/defaults/main.yml](/roles/joomla/defaults/main.yml) 文件中的 ```joomla_download_url``` 来安装指定版本。  
 
-我们会定期检查版本，并测试官方版本的可用性，以保证用户可以顺利安装最新版。
+如果你发现不是最新版本，请到 Joomla 仓库 [release 页面](https://downloads.joomla.org/)获取最新版源码下载链接，再修改 [main.yml](/roles/joomla/defaults/main.yml) 中的 ```joomla_download_url``` 变量值即可安装最新版 Joomla。  
 
 ## 安装指南
 
