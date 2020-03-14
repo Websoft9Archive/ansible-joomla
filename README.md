@@ -24,7 +24,7 @@
 
 ## 本项目安装的是 Joomla 最新版吗？
 
-本项目通过下载 joomla 源码进行安装，下载链接存储在：[role/joomla/default/main.yml](/roles/joomla/defaults/main.yml)。我们会定期检查并测试官方版本的可用性，尽可能保证用户可以顺利安装最新版。
+本项目通过下载 joomla 源码进行安装，下载链接存储在：[role/joomla/defaults/main.yml](/roles/joomla/defaults/main.yml)。我们会定期检查并测试官方版本的可用性，尽可能保证用户可以顺利安装最新版。
 
 ```
 joomla_download_url: "https://github.com/joomla/joomla-cms/releases/download/3.9.15/Joomla_3.9.15-Stable-Full_Package.zip"
