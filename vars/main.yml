@@ -28,9 +28,7 @@ init_db:
 # 应用数据库信息
 init_application:
   joomla:
-    service: php-fpm
-    database: joomla 
-    database_user: joomla
-    database_host: localhost
-    database_password: "123456"
+    admin: root
+    users: ["joomla"]
+    password: "123456"  
     
