@@ -30,5 +30,4 @@ init_application:
   joomla:
     admin: root
     users: ["joomla"]
-    password: "123456"  
-    
+    password: "123456"
