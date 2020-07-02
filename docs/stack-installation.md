@@ -15,6 +15,8 @@ If you have completed the Joomla deployment on Cloud Platform, the following ste
 2. Set the site information and Super User Account Details,then Cick “next” button
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-installconf-websoft9.png)
 
+   > Email is your login ID, not collected by anyone because it stored in your Cloud Server
+
 3. Then configure the database connection information([Don't know password?](/stack-accounts.html#mysql))
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-installdb-websoft9.png)
 
@@ -52,4 +54,4 @@ Yes
 
 #### Joomla not the latest version?
 
-Completed the Joomla initial installation, the login backen can be updated online to the latest version with one click.
+Completed the Joomla initial installation, the login console can be updated online to the latest version with one click.
