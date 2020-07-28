@@ -9,10 +9,8 @@ php_version: "7.2"
 
 preend_certbot: True
 
-# 生成应用数据库和用户
 mysql_databases:
  - name: joomla
-   encoding: utf8
  
 mysql_users:
  - name: joomla
