@@ -1,4 +1,3 @@
-## 部署
 - name: Joomla
   hosts: all
   become: yes
@@ -25,9 +24,7 @@
 
     runtime_name: "{{infrastructure_select[webs_selection] | lower}}" 
     joomla_webs: "{{webs_select[webs_selection]}}" 
-    phpmyadmin_webs: "{{webs_select[webs_selection]}}" 
     w9panel_webs: "{{webs_select[webs_selection]}}" 
-
     w9panel_set_infrastructure: "{{infrastructure_select[webs_selection]}}" 
     w9panel_set_apps: 
       - Joomla
@@ -45,13 +42,13 @@
     - {role: role_apache, tags: "role_apache", when: joomla_webs == 'apache'}
     - {role: role_nginx, tags: "role_nginx", when: joomla_webs == 'nginx'}
     - {role: role_mysql, tags: "role_mysql"}
-    - {role: role_php-fpm, tags: "role_php-fpm"}
+    - {role: role_php, tags: "role_php"}
     - {role: role_inotify_watch, tags: "role_inotify_watch"}
     - {role: role_runtime, tags: "role_runtime"}
-    - {role: role_phpmyadmin, tags: "role_phpmyadmin"}
+    - {role: role_docker, tags: "role_docker"}
     - {role: role_9panel, tags: "role_9panel"}
     - {role: role_redis, tags: "role_redis"}
     - {role: joomla, tags: "joomla"}
     - {role: role_init_password, tags: "role_init_password"}
-    - {role: role_preend, preend_certbot: True, tags: "role_preend"}
+    - {role: role_preend, tags: "role_preend"}
     - {role: role_end, tags: "role_end"}
