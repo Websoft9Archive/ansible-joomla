@@ -24,6 +24,7 @@
 
     runtime_name: "{{infrastructure_select[webs_selection] | lower}}" 
     joomla_webs: "{{webs_select[webs_selection]}}" 
+    joomla_db_password: "{{mysql_root_password}}"
     w9panel_webs: "{{webs_select[webs_selection]}}" 
     w9panel_set_infrastructure: "{{infrastructure_select[webs_selection]}}" 
     w9panel_set_apps: 
