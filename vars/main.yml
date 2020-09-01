@@ -11,6 +11,7 @@ mysql_root_password: "123456"
 
 php_version: "7.4"
 apache_appname: "joomla"
+nginx_appname: "joomla"
 
 docker_applications: 
   - phpmyadmin
