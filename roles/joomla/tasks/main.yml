@@ -41,9 +41,6 @@
 - block:
   - name: change owner&group
     shell: chown -R {{joomla_owner}}:{{joomla_owner}} /data/wwwroot
-
-  - name: Copy Apache or Nginx vhost configuration
-    template: src={{joomla_vhost_src}} dest={{joomla_vhost_dir}}
     
   - name: restart Apache or Nginx
     service: name={{joomla_service}} state=restarted enabled=yes
