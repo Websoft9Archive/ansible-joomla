@@ -9,5 +9,5 @@ joomla_db_password: "123456"
 joomla_name: "joomla"
 joomla_title: "Joomla"
 #下载链接需定期维护
-joomla_download_url: "https://github.com/joomla/joomla-cms/releases/download/3.9.21/Joomla_3.9.21-Stable-Full_Package.zip"
+joomla_download_url: "https://github.com/joomla/joomla-cms/releases/download/3.9.22/Joomla_3.9.22-Stable-Full_Package.zip"
 
