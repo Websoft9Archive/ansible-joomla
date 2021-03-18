@@ -36,6 +36,8 @@
     sed -i 's/name="db_user"/&\n\t\t\t\tdefault="{{joomla_name}}"/' database.xml
     sed -i 's/name="db_pass"/&\n\t\t\t\tdefault="{{joomla_db_password}}"/' database.xml
     sed -i 's/name="db_name"/&\n\t\t\t\tdefault="{{joomla_name}}"/' database.xml 
+  args:
+    chdir: /data/wwwroot/joomla/installation/model/forms
 
 # 系统通用
 - name: Permission directory
