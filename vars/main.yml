@@ -33,3 +33,5 @@ init_db:
     admin: root
     users: ["joomla"]
     password: "123456"
+    config_paths: 
+      - /data/wwwroot/joomla/installation/model/forms/database.xml

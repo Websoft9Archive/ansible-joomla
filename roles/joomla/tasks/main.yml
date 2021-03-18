@@ -31,6 +31,12 @@
 - name: Rename dir name
   shell: cd /data/wwwroot; if [ ! -d "{{joomla_name}}" ]; then mv *{{joomla_name}}* {{joomla_name}}; fi
 
+- name: Preparations for site initialization
+  shell: |
+    sed -i 's/name="db_user"/&\n\t\t\t\tdefault="{{joomla_name}}"/' database.xml
+    sed -i 's/name="db_pass"/&\n\t\t\t\tdefault="{{joomla_db_password}}"/' database.xml
+    sed -i 's/name="db_name"/&\n\t\t\t\tdefault="{{joomla_name}}"/' database.xml 
+
 # 系统通用
 - name: Permission directory
   shell: |
