@@ -57,7 +57,6 @@
     service: name=php-fpm state=restarted
 
 # Check joomla version
-
 - name: Check joomla version
   shell: >
     sudo echo "joomla version:" $(cat /data/wwwroot/joomla/language/en-GB/install.xml |grep "<version>" |tr -d "<version>") |tee -a /data/logs/install_version.txt
