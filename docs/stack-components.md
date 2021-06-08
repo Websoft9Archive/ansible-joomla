@@ -62,10 +62,9 @@ These ports should be opened for this application:
 
 | Name | Number | Use |  Necessity |
 | --- | --- | --- | --- |
-| MySQL | 3306 | Remote connect MySQL | Optional |
 | HTTP | 80 | HTTP requests for Joomla | Required |
 | HTTPS | 443 | HTTPS requests Joomla | Optional |
-| Docker | 8080 | OnlyOffice Document Server on Docker | Optional |
+| MySQL | 3306 | Remote connect MySQL | Optional |
 
 ## Version
 
