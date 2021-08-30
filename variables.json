@@ -8,7 +8,7 @@
   "requirements_Bandwidth": "100",
   "requirements_disk": "20",
   "requirements_swap": "2",
-  "requirements_configure_url": "https://github.com/joomla/joomla-cms/releases",
+  "requirements_configure_url": "https://www.joomla.org/about-joomla/getting-started.html",
   "components": "Joomla, Apache/Nginx, MySQL, PHP",
   "install_way": {
     "en": "Isntallation for download binaries files ",
