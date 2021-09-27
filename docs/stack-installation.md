@@ -12,29 +12,29 @@ If you have completed the Joomla deployment on Cloud Platform, the following ste
 
 1. Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*, start to install  
 
-2. Set the site information and Super User Account Details,then Cick “next” button
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-installconf-websoft9.png)
+2. Set the site information and select language,then Cick “Setup Login Data” button
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard1-websoft9.png)
 
+3. Set the user account inforamton
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard2-websoft9.png)
    > Email is your login ID, not collected by anyone because it stored in your Cloud Server
 
-3. Then configure the database connection information([Don't know password?](/stack-accounts.html#mysql))
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-installdb-websoft9.png)
-
-4. Click the "Next" button when complete the Database Configuration,the wizard will start to install.
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-installss-websoft9.png)
+4. Then configure the database connection information([Don't know password?](/stack-accounts.html#mysql))
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard3-websoft9.png)
 
 5. Click "Extra steps: Install languages" to install extra language 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-installlanguages-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard4-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard5-websoft9.png)
 
 6. Follow the prompts to set whether to enable the multi-language feature of the website and set the default front-back language
 
 7. Click the “Remove installation folder” button
 
 8. Log in Joomla backend (URL is *http://domain/administrator*)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-login-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard6-websoft9.png)
 
 9. You can use the Joomla backend to setup your site now
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-backend-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard7-websoft9.png)
 
 > Refer to [Joomla admin_manual](https://docs.joomla.org/Main_Page) to get more details
 
