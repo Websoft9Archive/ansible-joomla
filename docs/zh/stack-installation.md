@@ -12,27 +12,27 @@
 
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 就进入引导首页
 
-2. 选择一门语言，并设置后台管理账号信息，牢记之
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-installstart-websoft9.png)
+2. 选择一门语言，并设置站点名称
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard1-websoft9.png)
 
-3. 填写您的数据库参数（[不知道账号密码？](/zh/stack-accounts.md#mysql)），然后进入下一步
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-installdb-websoft9.png)
+3. 填写用户，账号，邮件等信息，然后进入下一步
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard2-websoft9.png)
 
-4. 选择或不选择一个演示数据，然后进入下一步
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-installdemo-websoft9.png)
+4. 填写您的数据库参数（[不知道账号密码？](/zh/stack-accounts.md#mysql)），然后进入下一步
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard3-websoft9.png)
 
-5. 安装成功，建议此时点击【特别推荐：安装语言】以安装更多语言以支持未来的多语言网站
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-installss-websoft9.png)
+5. 安装成功，建议此时点击【特别推荐：安装语言】以安装更多语言以支持未来的多语言网
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard4-websoft9.png)
 
 6. 开始安装更多语言（可选），其中【Chinese Simplified (zh-CN)】是必选语言
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-installlanguages-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard5-websoft9.png)
 
 7. 根据提示，设置是否开启网站的多语言功能，并设置默认前后台语言
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard6-websoft9.png)
 
-8. 点击【"删除" installation 目录】，方可登录后台
-
-9. Joomla后台地址：http://域名/administrator
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-loginpage-websoft9.png)
+8. Joomla后台地址：http://域名/administrator，成功登陆后您可以开始使用Joomla
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard7-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard8-websoft9.png)
 
 > 需要了解更多 Joomla 的使用，请参考官方文档：[Joomla Docs](https://docs.joomla.org/Main_Page/zh-cn)
 
