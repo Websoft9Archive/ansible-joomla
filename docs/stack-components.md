@@ -65,6 +65,7 @@ These ports should be opened for this application:
 | HTTP | 80 | HTTP requests for Joomla | Required |
 | HTTPS | 443 | HTTPS requests Joomla | Optional |
 | MySQL | 3306 | Remote connect MySQL | Optional |
+| HTTP | 9090 | phpMyAdmin on Docker | Optional |
 
 ## Version
 
