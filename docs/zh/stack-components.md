@@ -64,6 +64,7 @@ Redis logs file: */var/log/redis/redis.log*
 | HTTP | 80 | 通过 HTTP 访问 Joomla | 必须 |
 | HTTPS | 443 | 通过 HTTPS 访问 Joomla | 可选 |
 | MySQL | 3306 | 远程连接 MySQL | 可选 |
+| HTTP | 9090 | phpMyAdmin 访问端口 |	可选
 
 ## 版本号
 
