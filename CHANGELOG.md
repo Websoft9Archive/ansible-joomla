@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Release joomla-v4.0.4-1  2021-12-16
+### Fixes and Enhancements
+- Update to 4.0.4
+
 ## Release joomla-v4.0.2-1  2021-08-30
 ### Fixes and Enhancements
 - Update to 4.0.2
